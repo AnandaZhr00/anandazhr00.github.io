@@ -197,6 +197,24 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
 .hero-in .d1{animation-delay:.05s}.hero-in .d2{animation-delay:.14s}.hero-in .d3{animation-delay:.23s}.hero-in .d4{animation-delay:.32s}
 @keyframes rise{to{opacity:1;transform:none}}
 
+/* ---------- print / simpan sebagai PDF ---------- */
+@media print{
+  @page{size:A4;margin:11mm}
+  html{scroll-behavior:auto}
+  body{background:var(--white)}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .rise,.hero-in .d1,.hero-in .d2,.hero-in .d3,.hero-in .d4{opacity:1!important;transform:none!important;animation:none!important}
+  .nav,.ticker,.hero-cta,.marquee{display:none!important}
+  section{padding:26px 0}
+  .hero{padding:18px 0 26px}
+  .sec-head{margin-bottom:20px;break-after:avoid}
+  .project{padding:20px;margin-bottom:18px;box-shadow:none;break-inside:avoid}
+  .skillcard,.certs li,.shot,.lab-photos,.timeline li{break-inside:avoid}
+  .exp{gap:24px}
+  footer{break-inside:avoid}
+  a{text-decoration:none}
+}
+
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .hero-in,.about,.exp,.project,.project.flip{grid-template-columns:1fr;gap:32px}
@@ -269,7 +287,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
     </div>
     <div class="about">
       <div>
-        <p>Saya Ananda, fresh graduate Sistem Informasi Universitas Gunadarma. Ketertarikan saya ada pada analisis bisnis, menggali kebutuhan pengguna, menerjemahkannya jadi spesifikasi, lalu memastikan solusinya benar-benar menyelesaikan masalah.</p>
+        <p>Saya Ananda, fresh graduate Sistem Informasi Universitas Gunadarma. Ketertarikan saya ada pada analisis bisnis — menggali kebutuhan pengguna, menerjemahkannya jadi spesifikasi, lalu memastikan solusinya benar-benar menyelesaikan masalah.</p>
         <p>Selama tiga tahun di Laboratorium Sistem Informasi, saya naik dari tutor sampai koordinator: mengatur jadwal praktikum, merapikan administrasi dan pelaporan data lab, serta mengambil keputusan operasional bersama tim asisten. Di sana saya belajar bahwa data yang rapi dan komunikasi yang jelas selalu jadi penentu.</p>
         <p>Di luar itu saya senang mengolah data sampai jadi cerita: mulai dari membersihkan dataset, membangun dashboard Power BI, sampai melatih model IndoBERT untuk membaca ribuan ulasan pelanggan pada proyek skripsi saya.</p>
       </div>
@@ -298,7 +316,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
         <span class="tab t-data">Data &amp; Analytics</span>
         <h3>Dashboard Sentimen Ulasan Cove</h3>
         <p class="p-role">Proyek skripsi · analisis data &amp; pengembangan dashboard</p>
-        <p>Cove punya ribuan ulasan yang tersebar di lima platform dan tidak pernah terbaca utuh oleh tim pemasaran. Saya kumpulkan ulasannya, melatih model IndoBERT untuk mengklasifikasi sentimen, lalu membungkusnya jadi dashboard Streamlit yang bisa difilter per platform, sentimen, dan rentang tahun, lengkap dengan unduhan CSV untuk analisis lanjutan.</p>
+        <p>Cove punya ribuan ulasan yang tersebar di lima platform dan tidak pernah terbaca utuh oleh tim pemasaran. Saya kumpulkan ulasannya, melatih model IndoBERT untuk mengklasifikasi sentimen, lalu membungkusnya jadi dashboard Streamlit yang bisa difilter per platform, sentimen, dan rentang tahun — lengkap dengan unduhan CSV untuk analisis lanjutan.</p>
         <ul class="metrics">
           <li><b>5.618</b><small>ulasan terolah</small></li>
           <li><b>5</b><small>platform sumber</small></li>
@@ -320,7 +338,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
         <span class="tab t-data">Data &amp; Analytics</span>
         <h3>Disney+ EDA &amp; Dashboard Power BI</h3>
         <p class="p-role">Proyek akhir FIKTI Learning · data analyst</p>
-        <p>Dataset katalog Disney+ saya bersihkan lebih dulu, mengisi nilai kosong, membuang kolom yang tidak terpakai, dan memastikan tidak ada duplikat, sebelum diubah jadi dashboard yang menjawab pertanyaan sederhana: konten seperti apa yang sebenarnya dipunya Disney+, dari negara mana, dan bagaimana pertumbuhannya.</p>
+        <p>Dataset katalog Disney+ saya bersihkan lebih dulu — mengisi nilai kosong, membuang kolom yang tidak terpakai, dan memastikan tidak ada duplikat — sebelum diubah jadi dashboard yang menjawab pertanyaan sederhana: konten seperti apa yang sebenarnya dipunya Disney+, dari negara mana, dan bagaimana pertumbuhannya.</p>
         <ul class="metrics">
           <li><b>1.450</b><small>judul dianalisis</small></li>
           <li><b>329</b><small>genre terpetakan</small></li>
@@ -374,7 +392,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
         <span class="tab t-web">Web Development</span>
         <h3>Beauty Bliss</h3>
         <p class="p-role">Proyek Pengelolaan Proyek Sistem Informasi · programmer</p>
-        <p>Toko daring kosmetik yang mengelompokkan produk berdasarkan undertone kulit : cool, neutral, warm. Supaya pembeli tidak menebak-nebak warna. Ada pula pengecekan skin tone lewat kamera untuk membantu pembeli baru. Saya mengerjakan sisi program: autentikasi, katalog per kategori, keranjang, sampai halaman alamat dan pilihan pembayaran.</p>
+        <p>Toko daring kosmetik yang mengelompokkan produk berdasarkan undertone kulit — cool, neutral, warm — supaya pembeli tidak menebak-nebak warna. Ada pula pengecekan skin tone lewat kamera untuk membantu pembeli baru. Saya mengerjakan sisi program: autentikasi, katalog per kategori, keranjang, sampai halaman alamat dan pilihan pembayaran.</p>
         <ul class="tools"><li>HTML</li><li>CSS</li><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
       </div>
       <div class="p-media">
